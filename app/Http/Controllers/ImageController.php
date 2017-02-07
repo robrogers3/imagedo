@@ -11,7 +11,6 @@ use Intervention\Image\Facades\Image;
 
 class ImageController extends Controller
 {
-    const BASE_PATH =  'https://s3.amazonaws.com/testtachu-1/';
     protected $imagePath;
     protected $thumbPath;
 
@@ -42,12 +41,14 @@ class ImageController extends Controller
             'images',  $name, [ 'visibility' => 'public',  'ContentType' => 'image/jpeg']
         );
 
-
         /** @var Image $image_thumb */
         $image_thumb = Image::make(request()->file('file'))->fit(100);
+
         /** @var Stream $image_thumb */
         $image_thumb = $image_thumb->stream('jpg');
+
         $this->thumbPath = 'images/tn-' . $name;
+
         Storage::disk('s3')->put("/images/tn-{$name}", (string) $image_thumb, 'public');
 
         return 'rock on!';
