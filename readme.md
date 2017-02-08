@@ -1,21 +1,23 @@
-# About This
+# About ImageDo
 
-This is a simple proof of concept for uploading, manipulating and storing files on S3.
+This is a simple proof of concept for uploading, manipulating and storing images on S3.
+Note: the image manipulation here is just thumbnail creation. There are lots of options. Lots. 
+See:  [Image Intervention](http://image.intervention.io) for a list of all the options. 
 
 You need to do a few things to bootstrap this project
 
 * copy over the .env-example file to .env
 ** be sure to fill in the AWS section for secret and key. the bucket is fine for testing
-* 'touch' this file database/database.sqlite from project root
+* 'touch' this file PROJECT_ROOT/database/database.sqlite from project root
 ** you may need to install sqlite, homebrew has it.
 * run php artisan migrate from project root. This creates the tables you need
 * run composer install
-* npm install, if you don't have node download it.
+* npm install (if you don't have node download it. It takes 2 minutes.
 * npm run dev
 * start a server with 'php artisan serve'
 
-A think that's it. Except learn a bit about Laravel
---------------------------------------------------- 
+A think that's it. Except learn a bit about Laravel.
+---------------------------------------------------- 
 
 Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
 
