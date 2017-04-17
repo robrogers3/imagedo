@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <div class="row">
+        @if (Auth::check())
         <div class="page-header">
             <h1>Give Me Your Images So I can Upload them to Amazon S3!!!</h1>
         </div>
@@ -10,6 +11,11 @@
               id="my-awesome-dropzone">
             {{ csrf_field() }}
         </form>
+            @else
+            <div class="page-header">
+                <h1>Login to upload Your Images So I can Upload them to Amazon S3!!!</h1>
+            </div>
+            @endif
     </div>
     <hr>
     <div class="row">
@@ -21,10 +27,9 @@
                 <dd class="list-group-item">
                     <img src="https://s3.amazonaws.com/testtachu-1/{{$image->thumb_path}}">
                     <a href="https://s3.amazonaws.com/testtachu-1/{{$image->image_path}}">Full Size</a>
-
                 </dd>
             @endforeach
-
         </dl>
     </div>
+    @include('scripts');
 @endsection
