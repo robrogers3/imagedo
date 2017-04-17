@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "edf86df56af760d4160092546a54b2b4",
+    "content-hash": "f9fb3418e67747f20b808a166b74e28e",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -1455,11 +1455,17 @@
         },
         {
             "name": "robrogers3/laraldap-auth",
-            "version": "dev-master",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
-                "url": "/Users/rob.rogers/projects/open-source/laradauth",
-                "reference": "6378365d7e30964b3699c59bbf024ff3c4692127"
+                "url": "https://github.com/robrogers3/laraldap-auth.git",
+                "reference": "5e9e7ccbbd04822313b5e28f924c9263b67432e4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/robrogers3/laraldap-auth/zipball/5e9e7ccbbd04822313b5e28f924c9263b67432e4",
+                "reference": "5e9e7ccbbd04822313b5e28f924c9263b67432e4",
+                "shasum": ""
             },
             "require": {
                 "illuminate/support": "5.3.* || 5.4.*",
@@ -1480,22 +1486,7 @@
                     "robrogers3\\laradauth\\": "src"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "robrogers3\\laradauth\\": "tests"
-                }
-            },
-            "scripts": {
-                "test": [
-                    "phpunit"
-                ],
-                "check-style": [
-                    "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
-                ],
-                "fix-style": [
-                    "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1510,14 +1501,13 @@
             "description": "ldap authentication for laravel",
             "homepage": "https://github.com/robrogers3/laraldap-auth",
             "keywords": [
-                "",
-                "authentication",
+                "Authentication",
                 "laraldap-auth",
                 "laravel",
                 "ldap",
                 "robrogers3"
             ],
-            "time": "2017-04-16 23:07:39"
+            "time": "2017-04-17T01:22:21+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -3876,9 +3866,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "robrogers3/laraldap-auth": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
